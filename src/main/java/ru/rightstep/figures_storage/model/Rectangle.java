@@ -45,24 +45,4 @@ public class Rectangle extends Figure {
         BigDecimal result = new BigDecimal(diagonal);
         return result.setScale(15, RoundingMode.HALF_UP);
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Rectangle rectangle = (Rectangle) o;
-
-        if (!Objects.equals(height, rectangle.height)) return false;
-        if (!Objects.equals(width, rectangle.width)) return false;
-        return super.getColor() == rectangle.getColor();
-    }
-
-    @Override
-    public int hashCode() {
-        int result = height != null ? height.hashCode() : 0;
-        result = 31 * result + (width != null ? width.hashCode() : 0);
-        result = 31 * result + (super.getColor() != null ? super.getColor().hashCode() : 0);
-        return result;
-    }
 }

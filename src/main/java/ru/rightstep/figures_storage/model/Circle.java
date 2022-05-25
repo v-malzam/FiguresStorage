@@ -37,22 +37,4 @@ public class Circle extends Figure {
         BigDecimal result = new BigDecimal(perimeter);
         return result.setScale(15, RoundingMode.HALF_UP);
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Circle circle = (Circle) o;
-
-        if (!Objects.equals(radius, circle.radius)) return false;
-        return super.getColor() == circle.getColor();
-    }
-
-    @Override
-    public int hashCode() {
-        int result = radius != null ? radius.hashCode() : 0;
-        result = 31 * result + (super.getColor() != null ? super.getColor().hashCode() : 0);
-        return result;
-    }
 }
