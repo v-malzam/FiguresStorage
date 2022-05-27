@@ -6,16 +6,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.rightstep.figures_storage.model.Color;
 import ru.rightstep.figures_storage.model.Figure;
-import ru.rightstep.figures_storage.service.FigureService;
+import ru.rightstep.figures_storage.service.IFigureService;
+import ru.rightstep.figures_storage.service.impl.FigureService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("figures")
 public class FigureController {
-    private final FigureService figureService;
+    private final IFigureService figureService;
 
-    public FigureController(FigureService figureService) {
+    public FigureController(IFigureService figureService) {
         this.figureService = figureService;
     }
 
