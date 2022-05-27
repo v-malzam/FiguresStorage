@@ -4,7 +4,7 @@ import ru.rightstep.figures_storage.model.Circle;
 
 import java.util.List;
 
-public interface ICircleService {
+public interface CircleService {
 
     List<Circle> getCirclesOrderedByRadius();
 

@@ -4,7 +4,7 @@ import ru.rightstep.figures_storage.model.Rectangle;
 
 import java.util.List;
 
-public interface IRectangleService {
+public interface RectangleService {
 
     List<Rectangle> getRectanglesOrderedByDiagonal();
 

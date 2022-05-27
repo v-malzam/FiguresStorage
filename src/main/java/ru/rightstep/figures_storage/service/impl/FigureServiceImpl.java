@@ -4,16 +4,16 @@ import org.springframework.stereotype.Service;
 import ru.rightstep.figures_storage.model.Color;
 import ru.rightstep.figures_storage.model.Figure;
 import ru.rightstep.figures_storage.repository.FigureRepository;
-import ru.rightstep.figures_storage.service.IFigureService;
+import ru.rightstep.figures_storage.service.FigureService;
 
 import java.util.Comparator;
 import java.util.List;
 
 @Service
-public class FigureService implements IFigureService {
+public class FigureServiceImpl implements FigureService {
     private final FigureRepository figureRepository;
 
-    public FigureService(FigureRepository figureRepository) {
+    public FigureServiceImpl(FigureRepository figureRepository) {
         this.figureRepository = figureRepository;
     }
 

@@ -3,15 +3,15 @@ package ru.rightstep.figures_storage.service.impl;
 import org.springframework.stereotype.Service;
 import ru.rightstep.figures_storage.model.Circle;
 import ru.rightstep.figures_storage.repository.CircleRepository;
-import ru.rightstep.figures_storage.service.ICircleService;
+import ru.rightstep.figures_storage.service.CircleService;
 
 import java.util.List;
 
 @Service
-public class CircleService implements ICircleService {
+public class CircleServiceImpl implements CircleService {
     private final CircleRepository circleRepository;
 
-    public CircleService(CircleRepository circleRepository) {
+    public CircleServiceImpl(CircleRepository circleRepository) {
         this.circleRepository = circleRepository;
     }
 

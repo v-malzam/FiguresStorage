@@ -5,7 +5,7 @@ import ru.rightstep.figures_storage.model.Figure;
 
 import java.util.List;
 
-public interface IFigureService {
+public interface FigureService {
 
     List<Figure> getFigures();
 
