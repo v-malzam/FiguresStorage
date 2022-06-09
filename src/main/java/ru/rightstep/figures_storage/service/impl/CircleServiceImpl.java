@@ -1,22 +1,22 @@
 package ru.rightstep.figures_storage.service.impl;
 
 import org.springframework.stereotype.Service;
-import ru.rightstep.figures_storage.dao.ICircleDAO;
 import ru.rightstep.figures_storage.model.Circle;
+import ru.rightstep.figures_storage.repository.CircleRepository;
 import ru.rightstep.figures_storage.service.CircleService;
 
 import java.util.List;
 
 @Service
 public class CircleServiceImpl implements CircleService {
-    private final ICircleDAO circleDAO;
+    private final CircleRepository circleRepository;
 
-    public CircleServiceImpl(ICircleDAO circleDAO) {
-        this.circleDAO = circleDAO;
+    public CircleServiceImpl(CircleRepository circleRepository) {
+        this.circleRepository = circleRepository;
     }
 
     @Override
     public List<Circle> getCirclesOrderedByRadius() {
-        return circleDAO.findByOrderByRadius();
+        return circleRepository.findByOrderByRadiusAsc();
     }
 }

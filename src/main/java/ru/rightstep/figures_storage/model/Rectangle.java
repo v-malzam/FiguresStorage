@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 
 @Entity
 @NoArgsConstructor
